@@ -21,7 +21,7 @@ echo "Monitoring CPU and Memory usage..."
 
 FILE_NAME="log.csv"
 
-# [ ! -f $FILE_NAME ] && { echo "datetime,cpuUsage,memUsage" >> $FILE_NAME; }
+[ ! -f $FILE_NAME ] && { echo "datetime,cpuUsage,memUsage" >> $FILE_NAME; }
 
 while :
 do 
@@ -34,11 +34,11 @@ do
     datetime=$(date +"%Y-%m-%d %T")
 
     # Print the usage
-    echo "$datetime"
-    echo "CPU Usage: $cpuUsage%"
-    echo "Memory Usage: $memUsage MB"
+    # echo "$datetime"
+    # echo "CPU Usage: $cpuUsage%"
+    # echo "Memory Usage: $memUsage MB"
 
-    # echo "$datetime,$cpuUsage,$memUsage" >> $FILE_NAME
+    echo "$datetime,$cpuUsage,$memUsage" >> $FILE_NAME
 
     # Sleep for 1 second
     sleep 1
