@@ -7,6 +7,7 @@ cpuCores=$(lscpu | awk "/CPU\(s\):/" | head -n 1)
 threads=$(lscpu | grep "Thread")
 coresPerThreads=$(lscpu | grep "Core(s)")
 sockets=$(lscpu | grep "Socket(s)")
+mem=$(grep MemTotal /proc/meminfo)
 
 echo "$model"
 echo "$arch"
@@ -14,6 +15,7 @@ echo "$cpuCores"
 echo "$threads"
 echo "$coresPerThreads"
 echo "$sockets"
+echo "$mem"
 echo ""
 echo "Monitoring CPU and Memory usage..."
 
