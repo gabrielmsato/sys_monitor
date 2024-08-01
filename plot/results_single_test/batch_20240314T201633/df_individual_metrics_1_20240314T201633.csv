@@ -1,0 +1,2 @@
+,image_name,timestamp,predicted_cars,predicted_cars_parking,real_cars,accuracy,precision,recall,f1_score,start_time,end_time,processing_time
+0,original_1654291987127,2022-06-03-21-33-07,3,,,,,,,1710447393.2773163,1710447408.8981447,15.62082839012146

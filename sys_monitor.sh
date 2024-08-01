@@ -34,12 +34,13 @@ do
     datetime=$(date +"%Y-%m-%d %T")
 
     # Print the usage
-    # echo "$datetime"
-    # echo "CPU Usage: $cpuUsage%"
-    # echo "Memory Usage: $memUsage MB"
+    echo "$datetime"
+    echo "CPU Usage: $cpuUsage%"
+    echo "Memory Usage: $memUsage MB"
+    echo ""
 
     echo "$datetime,$cpuUsage,$memUsage" >> $FILE_NAME
 
     # Sleep for 1 second
-    sleep 1
+    sleep 0.2
 done
